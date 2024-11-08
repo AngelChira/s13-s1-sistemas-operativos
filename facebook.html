@@ -43,24 +43,48 @@
       <img src="img/google.webp" alt="imagen del blog" />
 
       <p>
-        Google maneja los sistemas distribuidos a través de Google Distributed
-        Cloud, un servicio que permite a los equipos crear, desplegar y escalar
-        entornos de desarrollo.
+        Facebook (ahora Meta) también utiliza una arquitectura de sistemas distribuidos que le permite manejar sus vastas necesidades de datos y tráfico de usuarios a nivel mundial. A continuación se presentan algunos de los sistemas distribuidos clave que usa Facebook y sus beneficios:
       </p>
 
       <p>
-        <strong>Google Distributed Cloud</strong> ofrece un entorno de
-        desarrollo uniforme que permite a los equipos trabajar desde la nube
-        hasta el perímetro. Además, cuenta con un flujo de trabajo de desarrollo
-        basado en Kubernetes y un ecosistema de socios.
+        <strong>Cassandra (Almacenamiento distribuido):</strong> Cassandra es un sistema de base de datos distribuido que Facebook ayudó a desarrollar, capaz de manejar grandes cantidades de datos a través de múltiples servidores. Este sistema es particularmente útil para el almacenamiento y gestión de datos estructurados que necesitan alta disponibilidad y rápida replicación en varias ubicaciones.
       </p>
 
       <p>
-        <strong>Google Distributed Cloud</strong> con espacio de aire ofrece
-        servicios avanzados en la nube, como soluciones de IA integradas, como
-        la API de Translation, Speech‐to‐Text o el reconocimiento óptico de
-        caracteres (OCR).
+        <strong>Hadoop y Hive (Procesamiento de datos a gran escala):</strong> Facebook utiliza Hadoop, un marco de procesamiento distribuido, para manejar el análisis de datos masivo. Hive, otra tecnología desarrollada por Facebook, es una capa sobre Hadoop que permite realizar consultas de datos a gran escala con una interfaz similar a SQL. Estos sistemas son esenciales para el análisis de tendencias, datos de usuarios y otras métricas a gran escala.
       </p>
+
+      <p></p>
+        <strong>Tao (Sistema de caché de grafos):</strong> Para manejar las relaciones entre usuarios, como los "amigos" y las "reacciones" en tiempo real, Facebook desarrolló Tao. Tao es un sistema distribuido para la lectura y escritura de grafos que permite consultar relaciones entre usuarios y contenidos de forma rápida y en tiempo real, optimizando la carga y la velocidad de la plataforma.
+      </p>
+
+      <p>
+        <strong>Haystack (Almacenamiento de fotos):</strong> Para el almacenamiento de imágenes, Facebook desarrolló Haystack, un sistema distribuido de almacenamiento de archivos optimizado para la recuperación rápida de fotos. Esto es crucial para las demandas de Facebook, ya que los usuarios suben grandes volúmenes de fotos constantemente.
+      </p>
+
+      <p>
+        <strong>Thrift (Comunicación entre servicios):</strong> Facebook desarrolló Thrift como un marco para facilitar la comunicación entre diferentes lenguajes de programación y servicios distribuidos. Thrift permite la creación de servicios eficientes y en múltiples lenguajes, permitiendo a los sistemas de Facebook interactuar de forma fluida.
+      </p>
+
+      <p>
+        <strong>Scuba (Análisis en tiempo real):</strong> Para monitorear y depurar la actividad en la plataforma, Facebook utiliza Scuba, un sistema de análisis distribuido en tiempo real. Esto permite que los ingenieros de Facebook vean datos de tráfico y rendimiento en vivo y puedan responder rápidamente a problemas emergentes.
+      </p>
+
+      <p>
+        <strong>Zookeeper (Coordinación y sincronización):</strong> Para coordinar y sincronizar servicios distribuidos, Facebook usa Zookeeper, una herramienta de coordinación distribuida que ayuda a mantener la consistencia y la gestión de configuraciones. Esto es esencial en un entorno de servidores masivos donde múltiples instancias de aplicaciones necesitan trabajar en conjunto.
+      </p>
+
+      <p>
+        <strong>FBAR (Red distribuida):</strong> Facebook ha construido una red global distribuida para mejorar la experiencia del usuario en todo el mundo. Con centros de datos y redes de entrega de contenido (CDNs), FBAR distribuye contenido de manera eficiente y reduce la latencia, haciendo que los usuarios de cualquier región experimenten tiempos de carga rápidos.
+      </p>
+
+      <h4>Ventajas de estos sistemas distribuidos en Facebook</h4>
+      <ul>
+        <li><strong>Escalabilidad:</strong> Al usar sistemas distribuidos, Facebook puede manejar millones de usuarios activos simultáneamente y responder a una creciente demanda de datos.</li>
+        <li><strong>Alta disponibilidad y fiabilidad:</strong> Si un servidor falla, el sistema redistribuye automáticamente la carga, minimizando las interrupciones.</li>
+        <li><strong>Reducción de la latencia:</strong> Al distribuir el contenido y las operaciones cerca de los usuarios, Facebook mejora el tiempo de respuesta y reduce la carga de los servidores centrales.</li>
+        <li><strong>Optimización de recursos:</strong> Con el uso de herramientas de cache y balanceo de carga, Facebook optimiza los recursos y reduce los costos de almacenamiento y procesamiento.</li>
+      </ul>
     </main>
 
     <footer class="footer">
