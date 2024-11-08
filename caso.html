@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Grupo 7 - Caso Práctico de Google File System</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="contenedor">
+        <div class="barra">
+          <a class="logo" href="index.html">
+            <h1 class="logo__nombre no-margin centrar-texto">
+              Blog <span class="logo__bold">Grupo 7</span>
+            </h1>
+          </a>
+
+          <nav class="navegacion">
+            <a href="index.html" class="navegacion__enlace">Inicio</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="header__texto">
+        <h2 class="no-margin">Blog de sistemas distribuidos</h2>
+        <p class="no-margin">
+          Aprende de las 5 empresas que usan sistemas distribuidos
+        </p>
+      </div>
+    </header>
+
+    <main class="contenedor">
+      <h3 class="centrar-texto">Caso Práctico: La Creación de Google File System para Manejar Datos Masivos</h3>
+
+      <div class="sobre-nosotros">
+        <div class="sobre-nosotros__imagen">
+          <img src="https://th.bing.com/th/id/OIP.QXyAliLjesH-3NlNw6_9qAHaHa?w=512&h=512&rs=1&pid=ImgDetMain" alt="Imagen Google File System" />
+        </div>
+
+        <div class="sobre-nosotros__texto">
+          <h4>Contexto del Problema</h4>
+          <p>
+            En sus primeros años, Google experimentó un crecimiento explosivo en la cantidad de datos que necesitaba almacenar y procesar. Como motor de búsqueda en Internet, Google rastreaba, indexaba y analizaba miles de millones de páginas web para ofrecer resultados relevantes y rápidos a los usuarios de todo el mundo. Sin embargo, la infraestructura de almacenamiento existente no estaba diseñada para manejar la escala y complejidad de estos datos en constante crecimiento, lo que generaba varios problemas:
+          </p>
+          <ul>
+            <li><strong>Escalabilidad Limitada:</strong> Los sistemas tradicionales no podían escalar para soportar el volumen masivo de datos que Google estaba generando.</li>
+            <li><strong>Costos de Infraestructura:</strong> Google necesitaba usar servidores comunes y baratos, pero estos eran menos confiables.</li>
+            <li><strong>Tolerancia a Fallos:</strong> Los servidores baratos eran propensos a fallar, lo que requería un sistema robusto que mantuviera la disponibilidad de los datos.</li>
+            <li><strong>Operaciones de Lectura y Escritura en Grandes Volúmenes:</strong> Google necesitaba un sistema capaz de gestionar lecturas y escrituras simultáneas sin afectar el rendimiento.</li>
+            <li><strong>Gestión Eficiente de Archivos y Datos No Estructurados:</strong> Google necesitaba almacenar grandes cantidades de datos no estructurados como páginas web, imágenes y textos.</li>
+          </ul>
+
+          <h4>La Solución: Google File System (GFS)</h4>
+          <p>
+            Para resolver estos problemas, Google desarrolló el <strong>Google File System (GFS)</strong>, un sistema de archivos distribuido diseñado específicamente para manejar grandes volúmenes de datos de manera eficiente y escalable. GFS introdujo varios conceptos clave que permitieron a Google superar los desafíos mencionados:
+          </p>
+          <ul>
+            <li><strong>División de Archivos en Bloques:</strong> Los archivos se dividen en bloques pequeños que se distribuyen entre múltiples servidores, permitiendo la gestión eficiente de archivos grandes.</li>
+            <li><strong>Replicación de Datos:</strong> Cada bloque de datos se replica en varios servidores, lo que garantiza que el sistema siga funcionando incluso si un servidor falla.</li>
+            <li><strong>Nodo Maestro y Nodos de Datos:</strong> Un nodo maestro gestiona los metadatos, mientras que los nodos de datos almacenan los bloques, permitiendo un control centralizado sin sobrecargar al sistema.</li>
+            <li><strong>Optimización para Lecturas y Escrituras Masivas:</strong> GFS soporta grandes volúmenes de lecturas y escrituras, distribuyendo la carga entre varios servidores.</li>
+            <li><strong>Escalabilidad Horizontal:</strong> GFS permite añadir servidores de bajo costo para expandir la capacidad sin necesidad de hardware especializado.</li>
+          </ul>
+
+          <h4>Impacto de GFS en Google y en la Industria</h4>
+          <p>
+            La implementación de GFS permitió a Google continuar con su expansión y mejorar su capacidad para almacenar y procesar grandes volúmenes de datos. Además, inspiró tecnologías similares, como <strong>Hadoop Distributed File System (HDFS)</strong>, que se ha utilizado ampliamente en otras empresas y organizaciones para el procesamiento de datos masivos.
+          </p>
+          <p>
+            Gracias a GFS, Google fue capaz de desarrollar infraestructuras como <strong>Bigtable</strong> y <strong>MapReduce</strong>, que contribuyeron al crecimiento de sus capacidades de procesamiento de datos en la nube, transformando la industria tecnológica y estableciendo nuevos estándares en la computación distribuida.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="contenedor">
+        <div class="barra">
+          <a class="logo" href="index.html">
+            <h1 class="logo__nombre no-margin centrar-texto">
+              Blog <span class="logo__bold">Grupo 7</span>
+            </h1>
+          </a>
+
+          <nav class="navegacion">
+            <a href="index.html" class="navegacion__enlace">Inicio</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/modernizr.js"></script>
+  </body>
+</html>
