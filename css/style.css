@@ -6,20 +6,27 @@
   --gris: #e1e1e1;
   --blanco: #ffffff;
   --negro: #000000;
+  --transicion: 0.3s ease-in-out;
 }
+
 html {
   box-sizing: border-box;
   font-size: 62.5%; /* 1 rem = 10px */
 }
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
+
 body {
   font-family: var(--fuenteParrafos);
   font-size: 1.6rem;
   line-height: 2;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: background-color var(--transicion), color var(--transicion);
 }
 
 /** Globales **/
@@ -27,9 +34,16 @@ body {
   width: min(90%, 120rem);
   margin: 0 auto;
 }
+
 a {
   text-decoration: none;
+  transition: color var(--transicion);
 }
+
+a:hover {
+  color: var(--gris);
+}
+
 h1,
 h2,
 h3,
@@ -37,28 +51,41 @@ h4 {
   font-family: var(--fuenteHeading);
   line-height: 1.2;
 }
+
 h1 {
   font-size: 4.8rem;
 }
+
 h2 {
   font-size: 4rem;
 }
+
 h3 {
   font-size: 3.2rem;
 }
+
 h4 {
   font-size: 2.8rem;
 }
+
 img {
   max-width: 100%;
+  transition: transform var(--transicion);
 }
+
+img:hover {
+  transform: scale(1.05);
+}
+
 /** Utilidades **/
 .no-margin {
   margin: 0;
 }
+
 .no-padding {
   padding: 0;
 }
+
 .centrar-texto {
   text-align: center;
 }
@@ -68,27 +95,49 @@ img {
   background-image: url("https://academiatech.s3.amazonaws.com/wp-content/uploads/2023/09/rede-12092023-65027240dea28-1024x576.webp");
   opacity: 0.9;
 }
+
 .no-webp .header {
   background-image: url("https://academiatech.s3.amazonaws.com/wp-content/uploads/2023/09/rede-12092023-65027240dea28-1024x576.webp");
 }
+
 .header {
   height: 60rem;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
+
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
 .header__texto {
   text-align: center;
   color: var(--blanco);
   margin-top: 5rem;
+  position: relative;
+  z-index: 2;
 }
+
 @media (min-width: 768px) {
   .header__texto {
     margin-top: 15rem;
   }
 }
+
 .barra {
   padding-top: 4rem;
+  z-index: 2;
 }
 
 @media (min-width: 768px) {
@@ -100,24 +149,39 @@ img {
 }
 .logo {
   color: var(--blanco);
+  cursor: pointer;
+  display: inline-block;
+  z-index: 3;
 }
+
+
 .logo__nombre {
   font-weight: 400;
 }
+
 .logo__bold {
   font-weight: 700;
 }
+
 @media (min-width: 768px) {
   .navegacion {
     display: flex;
     gap: 2rem;
   }
 }
+
 .navegacion__enlace {
   display: block;
   text-align: center;
   font-size: 1.8rem;
   color: var(--blanco);
+  transition: color var(--transicion);
+  z-index: 3;
+}
+
+.navegacion__enlace:hover {
+  color: var(--primario);
+  pointer-events: auto;
 }
 
 @media (min-width: 768px) {
@@ -131,11 +195,18 @@ img {
 .entrada {
   border-bottom: 1px solid var(--gris);
   margin-bottom: 2rem;
+  transition: border-color var(--transicion);
 }
+
+.entrada:hover {
+  border-color: var(--primario);
+}
+
 .entrada:last-of-type {
   border: none;
   margin-bottom: 0;
 }
+
 .boton {
   display: block;
   font-family: var(--fuenteHeading);
@@ -147,6 +218,7 @@ img {
   font-weight: 700;
   margin-bottom: 2rem;
   border: none;
+  transition: background-color var(--transicion), transform var(--transicion);
 }
 
 @media (min-width: 768px) {
@@ -154,12 +226,16 @@ img {
     display: inline-block;
   }
 }
+
 .boton:hover {
   cursor: pointer;
+  transform: scale(1.05);
 }
+
 .boton--primario {
   background-color: var(--negro);
 }
+
 .boton--secundario {
   background-color: var(--primario);
 }
@@ -172,18 +248,27 @@ img {
 .widget-curso {
   border-bottom: 1px solid var(--gris);
   margin-bottom: 2rem;
+  transition: border-color var(--transicion);
 }
+
+.widget-curso:hover {
+  border-color: var(--primario);
+}
+
 .widget-curso:last-of-type {
   border: none;
   margin-bottom: 0;
 }
+
 .widget-curso__label {
   font-family: var(--fuenteHeading);
   font-weight: bold;
 }
+
 .widget-curso__info {
   font-weight: normal;
 }
+
 .widget-curso__label,
 .widget-curso__info {
   font-size: 2rem;
@@ -208,7 +293,13 @@ img {
 .curso {
   padding: 3rem 0;
   border-bottom: 1px solid var(--gris);
+  transition: border-color var(--transicion);
 }
+
+.curso:hover {
+  border-color: var(--primario);
+}
+
 @media (min-width: 768px) {
   .curso {
     display: grid;
@@ -216,16 +307,20 @@ img {
     column-gap: 2rem;
   }
 }
+
 .curso:last-of-type {
   border: none;
 }
+
 .curso__label {
   font-family: var(--fuenteHeading);
   font-weight: bold;
 }
+
 .curso__info {
   font-weight: normal;
 }
+
 .curso__label,
 .curso__info {
   font-size: 2rem;
@@ -240,6 +335,7 @@ img {
   color: var(--blanco);
   text-transform: uppercase;
 }
+
 .correcto {
   background-color: rgb(74, 185, 0);
   text-align: center;
@@ -247,6 +343,7 @@ img {
   color: var(--blanco);
   text-transform: uppercase;
 }
+
 .contacto-bg {
   background-image: url(../img/contacto.jpg);
   height: 40rem;
@@ -259,20 +356,35 @@ img {
   margin: -5rem auto 0 auto;
   width: 95%;
   padding: 5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow var(--transicion);
 }
+
+.formulario:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 .campo {
   display: flex;
   margin-bottom: 2rem;
 }
+
 .campo__label {
   flex: 0 0 9rem;
   text-align: right;
   padding-right: 2rem;
 }
+
 .campo__field {
   flex: 1;
   border: 1px solid var(--gris);
+  transition: border-color var(--transicion);
 }
+
+.campo__field:focus {
+  border-color: var(--primario);
+}
+
 .campo__field--textarea {
   height: 20rem;
 }
@@ -280,4 +392,9 @@ img {
 /** Twitter  **/
 .enlace-redalyc {
   color: blue;
+  transition: color var(--transicion);
+}
+
+.enlace-redalyc:hover {
+  color: var(--primario);
 }
