@@ -124,7 +124,7 @@ img {
   .contenido-principal {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    column-gap: 4rem;
+    column-gap: 10rem;
   }
 }
 
