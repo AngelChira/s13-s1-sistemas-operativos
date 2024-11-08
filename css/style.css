@@ -164,6 +164,7 @@ img {
   background-color: var(--primario);
 }
 
+/** aside **/
 .cursos {
   list-style: none;
 }
@@ -274,4 +275,9 @@ img {
 }
 .campo__field--textarea {
   height: 20rem;
+}
+
+/** Twitter  **/
+.enlace-redalyc {
+  color: blue;
 }

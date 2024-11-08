@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog Grupo 7</title>
+    <title>Blog Grupo 7 - Twitter</title>
     <link rel="stylesheet" href="css/normalize.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
@@ -17,22 +17,21 @@
         <div class="barra">
           <a class="logo" href="index.html">
             <h1 class="logo__nombre no-margin centrar-texto">
-              Blog<span class="logo__bold">DeCafé</span>
+              Blog <span class="logo__bold">Grupo 7</span>
             </h1>
           </a>
 
           <nav class="navegacion">
+            <a href="index.html" class="navegacion__enlace">Inicio</a>
             <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
-            <a href="cursos.html" class="navegacion__enlace">Cursos</a>
-            <a href="contacto.html" class="navegacion__enlace">Contacto</a>
           </nav>
         </div>
       </div>
 
       <div class="header__texto">
-        <h2 class="no-margin">Blog de café con consejos y cursos</h2>
+        <h2 class="no-margin">Blog de sistemas distribuidos</h2>
         <p class="no-margin">
-          Aprende de los expertos con las mejores recetas y consejos
+          Aprende de las 5 empresas que usan sistemas distribuidos
         </p>
       </div>
     </header>
@@ -46,24 +45,73 @@
         <strong>Arquitectura Distribuida de Twitter</strong>
       </p>
       <ul>
-        <li><strong>Alta Escalabilidad y Disponibilidad:</strong> Twitter es una red social que maneja millones de tweets, menciones y mensajes por segundo. Para poder operar a esta escala y asegurar la disponibilidad continua del servicio, Twitter utiliza una arquitectura distribuida. Esto significa que sus datos y procesos no están centralizados en un solo servidor, sino que están repartidos en una red de servidores ubicados en distintos lugares.</li>
-        <li><strong>Microservicios:</strong> Twitter opera mediante microservicios, un enfoque en el que la funcionalidad de la aplicación se divide en varios servicios pequeños que interactúan entre sí. Cada microservicio cumple una función específica, como el manejo de notificaciones, el procesamiento de tweets o la administración de la interfaz de usuario. Esto permite que Twitter escale de forma independiente cada servicio según la demanda.</li>
+        <li>
+          <strong>Alta Escalabilidad y Disponibilidad:</strong> Twitter es una
+          red social que maneja millones de tweets, menciones y mensajes por
+          segundo. Para poder operar a esta escala y asegurar la disponibilidad
+          continua del servicio, Twitter utiliza una arquitectura distribuida.
+          Esto significa que sus datos y procesos no están centralizados en un
+          solo servidor, sino que están repartidos en una red de servidores
+          ubicados en distintos lugares.
+        </li>
+        <li>
+          <strong>Microservicios:</strong> Twitter opera mediante
+          microservicios, un enfoque en el que la funcionalidad de la aplicación
+          se divide en varios servicios pequeños que interactúan entre sí. Cada
+          microservicio cumple una función específica, como el manejo de
+          notificaciones, el procesamiento de tweets o la administración de la
+          interfaz de usuario. Esto permite que Twitter escale de forma
+          independiente cada servicio según la demanda.
+        </li>
       </ul>
       <p>
         <strong>Visualización y Estrategias de Difusión</strong>
       </p>
       <ul>
-        <li>Los sistemas distribuidos de Twitter también permiten visualizar los resultados del análisis en tiempo real, lo que es crucial para estrategias de difusión. Por ejemplo, se pueden diseñar campañas de marketing más efectivas y dirigidas a los usuarios clave.</li>
-        <li>Al usar sistemas distribuidos que soportan el análisis de grandes volúmenes de datos de redes sociales, Twitter permite generar una "radiografía" en tiempo real de cómo se diseminan temas específicos en la plataforma.</li>
+        <li>
+          Los sistemas distribuidos de Twitter también permiten visualizar los
+          resultados del análisis en tiempo real, lo que es crucial para
+          estrategias de difusión. Por ejemplo, se pueden diseñar campañas de
+          marketing más efectivas y dirigidas a los usuarios clave.
+        </li>
+        <li>
+          Al usar sistemas distribuidos que soportan el análisis de grandes
+          volúmenes de datos de redes sociales, Twitter permite generar una
+          "radiografía" en tiempo real de cómo se diseminan temas específicos en
+          la plataforma.
+        </li>
       </ul>
       <p>
-        Un estudio analizó el uso de Twitter en relación con el producto agroindustrial "mezcal". Se extrajeron más de 57,000 tweets para construir redes que relacionan usuarios, hashtags y retweets. Este análisis permitió identificar patrones ocultos y actores influyentes dentro del ecosistema de Twitter. Utilizando técnicas de análisis de redes sociales (ARS), se diseñaron estrategias para mejorar la difusión de información sobre el producto. <a href="https://www.redalyc.org/journal/339/33958304005/html/">Aguilar-Gallegos (2019). ANÁLISIS DE REDES EN TWITTER PARA LA INSERCIÓN EN COMUNIDADES: EL CASO DE UN PRODUCTO AGROINDUSTRIAL.</a>
+        Un estudio analizó el uso de Twitter en relación con el producto
+        agroindustrial "mezcal". Se extrajeron más de 57,000 tweets para
+        construir redes que relacionan usuarios, hashtags y retweets. Este
+        análisis permitió identificar patrones ocultos y actores influyentes
+        dentro del ecosistema de Twitter. Utilizando técnicas de análisis de
+        redes sociales (ARS), se diseñaron estrategias para mejorar la difusión
+        de información sobre el producto.
+        <a
+          href="https://www.redalyc.org/journal/339/33958304005/html/"
+          target="_blank"
+          class="enlace-redalyc"
+          >Aguilar-Gallegos (2019). ANÁLISIS DE REDES EN TWITTER PARA LA
+          INSERCIÓN EN COMUNIDADES: EL CASO DE UN PRODUCTO AGROINDUSTRIAL.</a
+        >
       </p>
       <p>
-        <strong>Importancia de los Sistemas Distribuidos para el Análisis en Twitter</strong>
+        <strong
+          >Importancia de los Sistemas Distribuidos para el Análisis en
+          Twitter</strong
+        >
       </p>
       <p>
-        El ejemplo del estudio de mezcal muestra cómo la infraestructura distribuida de Twitter no solo hace que la plataforma funcione a nivel técnico, sino que también permite que los investigadores y analistas extraigan información útil para estrategias de difusión y marketing. Gracias a su arquitectura distribuida, Twitter puede manejar la enorme carga de datos de redes sociales y ofrecer capacidades de análisis en tiempo real, lo que convierte a la plataforma en una herramienta valiosa para estudios y campañas basadas en redes sociales.
+        El ejemplo del estudio de mezcal muestra cómo la infraestructura
+        distribuida de Twitter no solo hace que la plataforma funcione a nivel
+        técnico, sino que también permite que los investigadores y analistas
+        extraigan información útil para estrategias de difusión y marketing.
+        Gracias a su arquitectura distribuida, Twitter puede manejar la enorme
+        carga de datos de redes sociales y ofrecer capacidades de análisis en
+        tiempo real, lo que convierte a la plataforma en una herramienta valiosa
+        para estudios y campañas basadas en redes sociales.
       </p>
     </main>
 
@@ -72,14 +120,13 @@
         <div class="barra">
           <a class="logo" href="index.html">
             <h1 class="logo__nombre no-margin centrar-texto">
-              Blog<span class="logo__bold">DeCafé</span>
+              Blog <span class="logo__bold">Grupo 7</span>
             </h1>
           </a>
 
           <nav class="navegacion">
+            <a href="index.html" class="navegacion__enlace">Inicio</a>
             <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
-            <a href="cursos.html" class="navegacion__enlace">Cursos</a>
-            <a href="contacto.html" class="navegacion__enlace">Contacto</a>
           </nav>
         </div>
       </div>
